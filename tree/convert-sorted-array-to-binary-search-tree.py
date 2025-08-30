@@ -16,4 +16,18 @@ class Solution:
 
         return root
 
+    """
+    root = self.traversal(nums, 0, len(nums)-1)
+    return root
+    def traversal (self, nums, left, right): #[]
+        if left > right:
+            return
+        mid = len(nums) // 2
+        root = TreeNode(nums[mid])
+        root.left = self.traversal(nums, left, mid-1)
+        root.right = self.traversal(nums, mid+1, right)
+        return root
+    """
+
+
         
