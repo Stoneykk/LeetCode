@@ -7,13 +7,14 @@ class Solution:
         result = []
 
         for number, freq in record.items():
-            heapq.heappush(heap, (-freq, number))
+            heapq.heappush(heap, (freq, number))
+            if len(heap) > k:
+                heapq.heappop(heap)
             
-            
-        for i in range(k):
+        for _ in range(len(heap)):
             result.append(heapq.heappop(heap)[1])
 
-        return result
+        return result[::-1]
         
 
             
