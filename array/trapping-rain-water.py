@@ -17,3 +17,6 @@ class Solution:
 
         return result
 
+        #三个for循环 -> O(n)
+        #两个大小为n的数组 -> O(n)
+
