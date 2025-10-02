@@ -11,7 +11,7 @@ class Solution:
             if target == nums[mid]:
                 return mid
             
-            if nums[mid] > nums[left]: #左半
+            if nums[mid] >= nums[left]: #左半
                 if target > nums[mid] or target < nums[left]:
                     left = mid + 1
                 else:
