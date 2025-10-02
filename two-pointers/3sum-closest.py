@@ -11,12 +11,14 @@ class Solution:
                 s = nums[i] + nums[j] + nums[k]
                 if s == target:
                     return s
-                if s > target:
+                elif s > target:
                     if s - target < diff:
+                        diff = s - target
                         ans = s
                     k -= 1
                 else: # s < target
                     if target - s < diff:
+                        diff = target - s
                         ans = s
                     j += 1
         return ans
