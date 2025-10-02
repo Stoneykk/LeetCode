@@ -11,7 +11,7 @@ class Solution:
                 s = nums[i] + nums[j] + nums[k]
                 if s == target:
                     return s
-                elif s > target:
+                if s > target:
                     if s - target < diff:
                         ans = s
                     k -= 1
