@@ -4,13 +4,13 @@ class Solution:
         nums.sort()
         ans = 0
         diff = float('inf')
-        for i in range(n):
+        for i in range(n-2):
             # 1. 遇到相同的跳过
             if nums[i] == nums[i-1]:
                 continue
             # 2. 有序+前3个已经大于target,后面的只会越来越远
             s = nums[i] + nums[i+1] + nums[i+2]
-            if s > target:
+            if i and s > target:
                 if s - target < diff:
                     ans = s
                     break
