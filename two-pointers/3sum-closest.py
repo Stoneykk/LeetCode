@@ -5,8 +5,6 @@ class Solution:
         ans = 0
         diff = float('inf')
         for i in range(n):
-            if nums[i] == nums[i-1]:
-                continue
             j = i + 1
             k = n - 1
             while j < k:
