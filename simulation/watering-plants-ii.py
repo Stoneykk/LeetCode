@@ -5,16 +5,16 @@ class Solution:
         ans = 0
         while a < b:
             # Alice
-            if ca > plants[a]:
+            if ca >= plants[a]:
                 ca -= plants[a]
                 a += 1
-            else: # ca <= plants[a]
+            else: # ca < plants[a]
                 ca = capacityA
                 ans += 1
                 ca -= plants[a]
                 a += 1
             # Bob
-            if cb > plants[b]:
+            if cb >= plants[b]:
                 cb -= plants[b]
                 b -= 1
             else:
